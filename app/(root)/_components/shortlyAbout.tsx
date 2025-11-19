@@ -11,15 +11,17 @@ export default function ShortlyAbout() {
                     <div className="w-4/5 border-20 border-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-4/5  rounded-full">
                     </div>
 
-                    <div className="absolute -right-10 -bottom-10">
-                        <div>
-                            <h1>
-                                700+
-                            </h1>
-                        </div>
+                    <div className={`absolute -right-1 -bottom-1 w-30 md:w-40 h-30 md:h-40 shadow bg-white p-10 ${Styles.flex_center} rounded-full`}>
+                        <div className={`rounded-full border-dashed border border-black w-20 md:w-30 h-20 md:h-30 shrink-0 ${Styles.flex_center} flex-col`}>
+                            <div>
+                                <h1 className="text-orange-500 text-center font-black">
+                                    700+
+                                </h1>
+                            </div>
 
-                        <div>
-                            <p className="text-neutral-800 text-shadow-sm text-xs md:text-[16px]">Muvaffaqiyatli bitiruvchilar</p>
+                            <div>
+                                <p className="text-neutral-800 text-shadow-sm md:text-[10px] text-[8px]">bizga ishonganlar</p>
+                            </div>
                         </div>
                     </div>
                 </div>
