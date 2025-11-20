@@ -302,3 +302,14 @@
   grid-column-start: 7;
   grid-row-start: 2;
 }
+
+@media (max-width: 64rem) {
+  .gallery .parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    padding: 10px 20px !important;
+  }
+}

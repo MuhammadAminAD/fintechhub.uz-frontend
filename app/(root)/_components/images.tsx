@@ -47,9 +47,8 @@ function Photos() {
                         <Image src={gallery_5} alt="" />
                     </div>
                     <div
-                        className="div9"
+                        className="div9 bg-[crimson]! py-5 w-full"
                         data-aos="fade-in"
-                        style={{ background: "#DC143C" }}
                         data-aos-delay="500"
                     >
                         <Link href={"https://dasturlash.fintechhub.uz/"}>
