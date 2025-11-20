@@ -14,23 +14,23 @@ export default function NavBarTop() {
     const [phone, setPhone] = useState("");
 
     return (
-        <div className="py-2 bg-blue-900">
+        <div className="py-2 bg-blue-400">
             <div className={`${Styles.container} flex justify-between items-center`}>
                 <div className="flex items-center gap-5">
                     <a href="tel:+998712038800" className="text-[8px] sm:text-sm text-white font-medium lg:hover:underline flex items-center gap-1">
-                        <Phone className="w-3 sm:w-4"/>
+                        <Phone className="w-3 sm:w-4" />
                         71 203 88 00
                     </a>
                     <a href="mailto:info@fintechhub.uz" className="text-[8px] sm:text-sm text-white font-medium lg:hover:underline flex items-center gap-1">
-                        <Mail className="w-3 sm:w-4"/>
+                        <Mail className="w-3 sm:w-4" />
                         info@fintechhub.uz
                     </a>
                 </div>
 
                 <div>
                     <Dialog>
-                        <DialogTrigger>
-                            <p className="text-[8px] sm:text-sm text-white font-medium lg:hover:underline flex items-center gap-1">Kurslarga yozilish</p>
+                        <DialogTrigger className="text-[8px] sm:text-sm text-white font-medium lg:hover:underline flex items-center gap-1">
+                            Kurslarga yozilish
                         </DialogTrigger>
 
                         <DialogContent className="overflow-hidden flex flex-col">
