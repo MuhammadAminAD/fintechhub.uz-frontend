@@ -52,7 +52,7 @@ export default function Paertners() {
           {logos.map((img, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/5 md:basis-1/5 sm:basis-1/3 xs:basis-1/2"
+              className="basis-1/2 md:basis-1/5 sm:basis-1/3 xs:basis-1/2"
             >
               <div className="flex items-center justify-center p-4">
                 <div className="h-[90px] w-[200px] flex items-center justify-center rounded-md">
