@@ -9,6 +9,7 @@ import ContactForm from './_components/contactForm'
 import Images from './_components/images'
 import WhyUs from './_components/WhyUs'
 import { FAQ } from './_components/faq'
+import Paertners from './_components/partners'
 
 export default function page() {
     return (
@@ -22,6 +23,7 @@ export default function page() {
             <Images />
             <WhyUs/>
             <FAQ />
+            <Paertners/>
             <Freetrial />
         </div>
     )
