@@ -2,16 +2,12 @@
 
 import { Styles } from "@/styles/styles";
 import { Mail, Phone } from "lucide-react";
-import { Dialog, DialogFooter, DialogHeader } from "../ui/dialog";
-import { DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "../ui/dialog";
-import { Button } from "../ui/button";
-import PhoneInput from 'react-phone-input-2';
+import { Dialog } from "../ui/dialog";
+import { DialogContent, DialogTrigger } from "../ui/dialog";
 import 'react-phone-input-2/lib/style.css';
-import { useState } from "react";
-import { Input } from "../ui/input";
+import ContactModalContent from "../ContactModalContent";
 
 export default function NavBarTop() {
-    const [phone, setPhone] = useState("");
 
     return (
         <div className="py-2 bg-blue-400">
@@ -34,28 +30,7 @@ export default function NavBarTop() {
                         </DialogTrigger>
 
                         <DialogContent className="overflow-hidden flex flex-col">
-                            <DialogHeader>
-                                <DialogTitle>
-                                    Dasturlashga ilk qadam <span className="text-blue-500">FinTechHub</span>dan boshlanadi!
-                                </DialogTitle>
-                                <DialogDescription>
-                                    Bepul maslahat olish uchun ro`yhatdan o`ting
-                                </DialogDescription>
-                            </DialogHeader>
-                            <Input type="text" placeholder="Ismingiz" className="mb-2" />
-                            <PhoneInput
-                                country={'uz'}
-                                value={phone}
-                                onChange={setPhone}
-                                placeholder="Telefon raqamingiz"
-                                containerStyle={{ width: "100%" }}
-                                inputStyle={{ width: "100%" }}
-                            />
-                            <DialogFooter className="flex-col! items-center">
-                                <Button className="bg-orange-600 w-full lg:hover:bg-orange-400">Bepul maslahat olmoqchiman</Button>
-                                <Button className="bg-blue-600 w-full lg:hover:bg-blue-400">Telegram orqali bog`lanish</Button>
-                                <p className="bg-transparent! text-neutral-600 text-center text-sm">Hozirda o`quv markazimiz faqat Toshkent shahrida joylashgan</p>
-                            </DialogFooter>
+                            <ContactModalContent />
                         </DialogContent>
                     </Dialog>
                 </div>
