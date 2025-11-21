@@ -7,6 +7,7 @@ import Freetrial from './_components/Freetrial'
 import YoutubeVideo from './_components/youtubeVideo'
 import ContactForm from './_components/contactForm'
 import Images from './_components/images'
+import WhyUs from './_components/WhyUs'
 import { FAQ } from './_components/faq'
 
 export default function page() {
@@ -19,8 +20,10 @@ export default function page() {
             <YoutubeVideo />
             <ContactForm />
             <Images />
+            <WhyUs/>
             <FAQ />
             <Freetrial />
         </div>
     )
 }
+
