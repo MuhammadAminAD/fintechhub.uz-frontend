@@ -33,7 +33,7 @@ export default function NavBarTop() {
                             <ContactModalContent />
                         </DialogContent>
                     </Dialog>
-                </div>x
+                </div>
             </div>
         </div>
     )
