@@ -8,11 +8,12 @@ import { SiTelegram } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import nav_logo from "../../assets/images/logo-white.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 
-interface FooterProps {}
+// interface FooterProps {}
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC = () => {
   // В вашем проекте используйте:
   // const navigate = useNavigate();
   const handleNavigate = (path: string): void => {
@@ -70,7 +71,7 @@ const Footer: React.FC<FooterProps> = () => {
   ];
 
   return (
-    <footer className="w-full bg-[#0a2540]">
+    <footer className="w-full navtop-bg">
       {/* Footer Top */}
       <div className="flex flex-col lg:flex-row">
         {/* Left Section - 70% */}
@@ -146,7 +147,7 @@ const Footer: React.FC<FooterProps> = () => {
 
             {/* Sections Column */}
             <div className="flex flex-col gap-6">
-              <h3 className="text-xl font-bold text-white">Bo'limlar</h3>
+              <h3 className="text-xl font-bold text-white">Bo`limlar</h3>
               <ul className="flex flex-col gap-3 text-[#94a3ac]">
                 {sections.map((section, index) => (
                   <li key={index}>
@@ -190,7 +191,7 @@ const Footer: React.FC<FooterProps> = () => {
             onClick={() => handleNavigate("/register")}
             className="bg-transparent text-white text-center py-4 px-6 rounded font-semibold text-lg border-2 border-white/30 hover:border-white/50 transition-colors"
           >
-            Ro'yhatdan o'tish
+            Ro`yhatdan o`tish
           </button>
         </div>
       </div>
@@ -200,12 +201,12 @@ const Footer: React.FC<FooterProps> = () => {
         <div className="w-full lg:w-[70%] bg-[#0d1f2d] px-6 md:px-10 lg:px-16 py-6">
           <span className="text-white/50 text-sm">
             © Copyright 2023 by{" "}
-            <a 
+            <Link 
               href="/" 
               className="font-bold text-white hover:text-gray-300 transition-colors"
             >
               fintechhub.uz
-            </a>
+            </Link>
           </span>
         </div>
         <div className="w-full lg:w-[30%] bg-[#0a2540] h-16 lg:h-auto"></div>
