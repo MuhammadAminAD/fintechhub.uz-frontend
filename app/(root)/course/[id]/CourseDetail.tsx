@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { FaPlay, FaStar } from "react-icons/fa6";
 import { IoIosNotificationsOutline, IoIosTimer } from "react-icons/io";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import CourseDetailBanner from "./CourseDetailBanner";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import ContactModalContent from "@/components/ContactModalContent";
 
 interface Description {
   icon: React.ReactNode;
@@ -385,6 +387,8 @@ const CourseDetail: React.FC = () => {
       </div>
     );
   }
+    
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="w-full">
@@ -433,13 +437,18 @@ const CourseDetail: React.FC = () => {
                 </h1>
                 <Button
                   size="lg"
-                  className="w-4/5 bg-orange-600 hover:bg-orange-700 transition-all duration-300 hover:-translate-y-0.5"
+                  onClick={() => setModalOpen(true)}
+                  className="w-4/5 bg-orange-600 cursor-pointer hover:bg-orange-700 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   Kursni sotib olish
                 </Button>
               </CardContent>
             </Card>
-
+            <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+              <DialogContent className="max-w-md">
+                <ContactModalContent />
+              </DialogContent>
+            </Dialog>
             {/* Details List */}
             <div className="flex flex-col w-full max-w-[340px] gap-0">
               {description?.map((item, index) => (
