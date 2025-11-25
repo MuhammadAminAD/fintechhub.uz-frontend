@@ -9,7 +9,7 @@ export default function FixedBanner({ title }: { title: string }) {
             <div
                 className={`${Styles.container} flex items-center justify-center`}
             >
-                <h1 className="text-white font-semibold text-3xl md:text-4xl lg:text-5xl capitalize">{title}</h1>
+                <h1 className="text-white font-semibold text-3xl md:text-4xl lg:text-5xl capitalize text-shadow-lg">{title}</h1>
             </div>
         </div>
     );
