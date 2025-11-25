@@ -10,11 +10,11 @@ import image from "@/assets/images/fintechOut.jpg"
 
 export function FAQ() {
     return (
-        <div className={`${Styles.container}  py-20 `}>
+        <div className={`${Styles.container} py-20 `}>
             <div className="mb-5">
                 <h2 className="text-xl md:text-3xl font-bold">Eng ko`p beriladigan savollar</h2>
             </div>
-            <div className={`flex gap-30 items-start`}>
+            <div className={`gap-30 items-start grid grid-cols-1 lg:grid-cols-2 `}>
                 <Accordion
                     type="single"
                     collapsible
