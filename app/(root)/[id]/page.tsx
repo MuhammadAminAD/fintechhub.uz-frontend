@@ -1,7 +1,11 @@
-export default function page() {
-    return (
-        <div>
+import FixedBanner from "@/components/FixedBanner";
+import CourseDetail from "./CourseDetail";
 
-        </div>
-    )
+export default function page() {
+  return (
+    <div>
+        <FixedBanner title="detail"/>
+        <CourseDetail/>
+    </div>
+  )
 }
