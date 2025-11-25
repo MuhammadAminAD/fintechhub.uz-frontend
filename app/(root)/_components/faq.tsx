@@ -21,17 +21,10 @@ export function FAQ() {
                     className="w-full"
                     defaultValue="item-0"
                 >
-                    {Array(6).fill(null).map((_, index) => (
-                        <AccordionItem
-                            value={`item-${index}`}
-                            key={index}
-                            className=" px-5 py-2   transition-all bg-white"
-                        >
-                            <AccordionTrigger className="md:text-lg font-medium text-gray-900 hover:text-blue-700 text-left">
-                                Product Information
-                            </AccordionTrigger>
-
-                            <AccordionContent className="flex flex-col gap-3 text-gray-600 leading-relaxed">
+                    {Array(6).fill(null).map((_, index) =>
+                        <AccordionItem value={`item-${index}`} key={index} data-aos="fade-right">
+                            <AccordionTrigger className="md:text-lg font-medium">Product Information</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
                                 <p>
                                     Our flagship product combines cutting-edge technology with sleek design.
                                     Built with premium materials, it offers unparalleled performance and
@@ -44,10 +37,10 @@ export function FAQ() {
                                 </p>
                             </AccordionContent>
                         </AccordionItem>
-                    ))}
+                    )}
                 </Accordion>
 
-                <Image src={image} alt="fintechhub.uz" />
+                <Image data-aos="fade-left" src={image} alt="fintechhub.uz" className="w-full rounded-2xl max-lg:row-start-1" />
             </div>
         </div>
     )

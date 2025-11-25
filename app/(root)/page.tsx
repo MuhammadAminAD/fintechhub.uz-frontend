@@ -1,33 +1,13 @@
-import React from 'react'
-import Header from './_components/header'
-import ShortlyAbout from './_components/shortlyAbout'
-import TrendCoursesBanner from './_components/trendCoursesBanner'
-import CoursesList from '@/components/CoursesList'
-import Freetrial from './_components/Freetrial'
-import YoutubeVideo from './_components/youtubeVideo'
-import ContactForm from './_components/contactForm'
-import Images from './_components/images'
-import WhyUs from './_components/WhyUs'
-import { FAQ } from './_components/faq'
-import Paertners from './_components/partners'
-import BlogsCarousel from './_components/blogsCarousel'
+import Home from "./main"
 
-export default function page() {
+
+export const metadata = {
+    title: "FintechHub - Dasturlashga ilk qadam shu yerdan boshlanadi!",
+}
+
+export default function Page() {
     return (
-        <div>
-            <Header />
-            <ShortlyAbout />
-            <TrendCoursesBanner />
-            <CoursesList />
-            <YoutubeVideo />
-            <ContactForm />
-            <Images />
-            <WhyUs />
-            <FAQ />
-            <Paertners/>
-            <BlogsCarousel />
-            <Freetrial />
-        </div>
+        <Home />
     )
 }
 

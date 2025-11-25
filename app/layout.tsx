@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import 'aos/dist/aos.css';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FintechHub.uz",
-  description: "FintechHub - Dasturlashga ilk qadam shu yerdan boshlanadi!",
+  title: "FintechHub - Dasturlashga ilk qadam shu yerdan boshlanadi!",
+  description: "Dasturlashni oson va tizimli tarzda o‘rganmoqchimisiz? FintechHub sizga noldan boshlash, mustahkam bilim olish va IT sohasiga kirish imkonini beradi.",
+  icons: { icon: "/favicon.ico" }
 };
 
 export default function RootLayout({
