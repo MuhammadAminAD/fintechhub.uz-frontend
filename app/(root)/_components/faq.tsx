@@ -6,15 +6,15 @@ import {
 } from "@/components/ui/accordion"
 import { Styles } from "@/styles/styles"
 import Image from "next/image"
-import image from "@/assets/images/HeaderBanner.jpg"
+import image from "@/assets/images/fintechOut.jpg"
 
 export function FAQ() {
     return (
-        <div className={`${Styles.container}  py-20 `}>
+        <div className={`${Styles.container} py-5  lg:py-20 `}>
             <div className="mb-5">
                 <h2 className="text-xl md:text-3xl font-bold">Eng ko`p beriladigan savollar</h2>
             </div>
-            <div className={`flex gap-30 items-start`}>
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20`}>
                 <Accordion
                     type="single"
                     collapsible
@@ -39,7 +39,7 @@ export function FAQ() {
                     )}
                 </Accordion>
 
-                <Image src={image} alt="fintechhub.uz" />
+                <Image src={image} alt="fintechhub.uz" className="w-full rounded-2xl max-lg:row-start-1" />
             </div>
         </div>
     )

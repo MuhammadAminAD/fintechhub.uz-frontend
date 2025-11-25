@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { X } from 'lucide-react';
-import mainImg from '../../../assets/images/benifits.jpg'
+import mainImg from '../../../assets/images/lesson.jpg'
 import icon1 from '../../../assets/images/finImage2.png'
 import icon2 from '../../../assets/images/finImage3.png'
 import icon3 from '../../../assets/images/finImage4.png'
+import Image from 'next/image';
 
 interface FormData {
   name: string;
@@ -110,7 +110,9 @@ const WhyUs: React.FC = () => {
           {/* Image Section */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative overflow-hidden  shadow-2xl w-full h-[400px] md:h-[600px] hover:shadow-3xl transition-all duration-300">
-              <img 
+              <Image
+                width={4000}
+                height={2000}
                 src={mainImg.src}
                 alt="FinTech Team"
                 className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-300"
@@ -121,7 +123,7 @@ const WhyUs: React.FC = () => {
           {/* Content Section */}
           <div className="space-y-8 lg:pr-10 px-4">
             <h2 className="text-4xl  lg:text-5xl font-bold text-[#012237] leading-tight">
-              Dasturlashni nega aynan FinTechHub'da o'rganish kerak?
+              Dasturlashni nega aynan FinTechHub`da o`rganish kerak?
             </h2>
 
             {/* Features Grid - 3 Columns */}
@@ -132,10 +134,12 @@ const WhyUs: React.FC = () => {
                   className="flex flex-col items-center gap-3 group cursor-pointer"
                 >
                   <div className="relative w-24 h-24 rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-110">
-                    <img 
+                    <Image
                       src={feature.img}
                       alt={feature.title}
                       className="w-full h-full object-cover"
+                      width={1080}
+                      height={720}
                     />
                   </div>
                   <h4 className="text-center text-sm md:text-base font-semibold text-[#012237] group-hover:text-[#DC143C] transition-colors duration-300">
@@ -150,7 +154,7 @@ const WhyUs: React.FC = () => {
               onClick={() => setModalOpen(true)}
               className="w-full h-16 text-lg font-bold text-white bg-linear-to-r from-[#DC143C] to-[#B91C3C] rounded-lg hover:from-[#B91C3C] hover:to-[#991B3D] transition-all duration-300 hover:-translate-y-1 active:translate-y-0 shadow-lg hover:shadow-xl mt-4"
             >
-              Ko'proq ma'lumot olmoqchiman
+              Ko`proq ma`lumot olmoqchiman
             </button>
           </div>
         </div>
