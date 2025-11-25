@@ -17,7 +17,7 @@ export default function ContactForm() {
     return (
         <section className="py-20 relative">
             <div className={`${Styles.container} flex items-center justify-between flex-col lg:flex-row max-lg:gap-10`}>
-                <div className="max-w-xl">
+                <div  data-aos="fade-right" className="max-w-xl">
                     <h2 className="text-xl md:text-3xl font-bold">Hoziroq ro‘yxatdan o`ting</h2>
                     <h3 className="md:text-lg mt-1 md:mt-2 mb-2 md:mb-5 font-medium">va bepul darsga ega bo`ling!</h3>
                     <p className="text-neutral-700">Dasturlash bilimlarini onlayn yoki offlayn tarzda o‘rganishingiz mumkin.
@@ -26,7 +26,7 @@ export default function ContactForm() {
                     </p>
                 </div>
 
-                <form action="" className="flex flex-col gap-5 p-5 sm:p-7 lg:p-10 border border-neutral-300 rounded-lg shadow-lg w-full max-w-xl">
+                <form data-aos="fade-left" action="" className="flex flex-col gap-5 p-5 sm:p-7 lg:p-10 border border-neutral-300 rounded-lg shadow-lg w-full max-w-xl">
                     <div className="w-full text-center text-2xl font-medium text-blue-400 text-shadow-sm">
                         <h4>Bepul darsga yozilish</h4>
                     </div>

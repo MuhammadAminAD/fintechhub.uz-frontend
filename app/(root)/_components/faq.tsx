@@ -22,7 +22,7 @@ export function FAQ() {
                     defaultValue="item-1"
                 >
                     {Array(6).fill(null).map((_, index) =>
-                        <AccordionItem value={`item-${index}`} key={index}>
+                        <AccordionItem value={`item-${index}`} key={index} data-aos="fade-right">
                             <AccordionTrigger className="md:text-lg font-medium">Product Information</AccordionTrigger>
                             <AccordionContent className="flex flex-col gap-4 text-balance">
                                 <p>
@@ -39,7 +39,7 @@ export function FAQ() {
                     )}
                 </Accordion>
 
-                <Image src={image} alt="fintechhub.uz" className="w-full rounded-2xl max-lg:row-start-1" />
+                <Image data-aos="fade-left" src={image} alt="fintechhub.uz" className="w-full rounded-2xl max-lg:row-start-1" />
             </div>
         </div>
     )

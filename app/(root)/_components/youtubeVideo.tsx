@@ -32,7 +32,7 @@ export default function YoutubeVideo() {
             <div
                 className={`${Styles.container} flex items-center justify-between flex-col lg:flex-row`}
             >
-                <div className="max-w-2xl py-20 text-bg">
+                <div className="max-w-2xl py-20 text-bg" data-aos="fade-right">
                     <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium">
                         FintechHub - professional dasturchi bo`lib chiqishingizni kafolatlaydi!
                     </h1>
@@ -43,6 +43,7 @@ export default function YoutubeVideo() {
 
                 {/* BUTTON wrap */}
                 <a
+                    data-aos="fade-left"
                     href="https://www.youtube.com/watch?v=jD6IDd6i86M"
                     target="_blank"
                     rel="noopener noreferrer"

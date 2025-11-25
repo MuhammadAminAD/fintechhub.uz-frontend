@@ -10,7 +10,7 @@ import ContactModalContent from "../ContactModalContent";
 export default function NavBarTop() {
 
     return (
-        <div className="py-2 bg-blue-400">
+        <div className="py-2 navtop-bg">
             <div className={`${Styles.container} flex justify-between items-center`}>
                 <div className="flex items-center gap-5">
                     <a href="tel:+998712038800" className="text-[8px] sm:text-sm text-white font-medium lg:hover:underline flex items-center gap-1">

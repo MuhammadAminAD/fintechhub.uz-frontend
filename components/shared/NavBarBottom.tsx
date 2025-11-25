@@ -13,10 +13,10 @@ export default function NavBarBottom() {
 
     const links = [
         { name: "Bosh sahifa", href: "/" },
-        { name: "Kurslarimiz", href: "/" },
-        { name: "Ustozlarimiz", href: "/" },
+        { name: "Kurslarimiz", href: "/courses+" },
+        { name: "Ustozlarimiz", href: "/mentors" },
         { name: "Aloqa", href: "/" },
-        { name: "Yangiliklar", href: "/" },
+        { name: "Yangiliklar", href: "/blog" },
     ];
 
     return (
