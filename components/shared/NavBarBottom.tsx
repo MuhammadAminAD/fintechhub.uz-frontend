@@ -7,9 +7,11 @@ import Logo from "@/assets/icons/logo-black.svg";
 import Image from "next/image";
 import { Styles } from "@/styles/styles";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function NavBarBottom() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     const links = [
         { name: "Bosh sahifa", href: "/" },
@@ -36,12 +38,20 @@ export default function NavBarBottom() {
 
                 {/* Desktop menu */}
                 <ul className="hidden lg:flex items-center gap-5 font-medium text-neutral-600">
-                    {links.map((link) => (
-                        <li key={link.name} className="lg:hover:underline text-black">
-                            <Link href={link.href}>{link.name}</Link>
-                        </li>
-                    ))}
-                </ul>
+                {links.map((link) => (
+                    <li
+                        key={link.name}
+                        className={`lg:hover:underline hover:text-[#012237] transition ${
+                            pathname === link.href
+                                ? "text-[#012237] font-semibold"
+                                : "text-neutral-300"
+                        }`}
+                    >
+                        <Link href={link.href}>{link.name}</Link>
+                    </li>
+                ))}
+            </ul>
+
 
                 {/* Mobile menu button */}
                 <div className="lg:hidden">
