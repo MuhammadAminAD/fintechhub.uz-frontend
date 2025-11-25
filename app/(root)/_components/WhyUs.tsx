@@ -49,7 +49,7 @@ const WhyUs: React.FC = () => {
           {/* Content Section */}
           <div className="space-y-8 lg:pr-10 px-4">
             <h2 className="text-4xl  lg:text-5xl font-bold text-[#012237] leading-tight">
-              Dasturlashni nega aynan FinTechHub'da o'rganish kerak?
+              Dasturlashni nega aynan FinTechHub`da o`rganish kerak?
             </h2>
 
             {/* Features Grid - 3 Columns */}
@@ -64,6 +64,8 @@ const WhyUs: React.FC = () => {
                       src={feature.img}
                       alt={feature.title}
                       className="w-full h-full object-cover"
+                      width={1080}
+                      height={720}
                     />
                   </div>
                   <h4 className="text-center text-sm md:text-base font-semibold text-[#012237] group-hover:text-[#DC143C] transition-colors duration-300">
@@ -78,7 +80,7 @@ const WhyUs: React.FC = () => {
               onClick={() => setModalOpen(true)}
               className="w-full h-16 text-lg font-bold cursor-pointer text-white bg-linear-to-r from-[#DC143C] to-[#B91C3C] rounded-lg hover:from-[#B91C3C] hover:to-[#991B3D] transition-all duration-300 hover:-translate-y-1 active:translate-y-0 shadow-lg hover:shadow-xl mt-4"
             >
-              Ko'proq ma'lumot olmoqchiman
+              Ko`proq ma`lumot olmoqchiman
             </button>
 
             <Dialog open={modalOpen} onOpenChange={setModalOpen}>

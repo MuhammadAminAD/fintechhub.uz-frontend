@@ -6,25 +6,15 @@ import {
 } from "@/components/ui/accordion"
 import { Styles } from "@/styles/styles"
 import Image from "next/image"
-import image from "@/assets/images/HeaderBanner.jpg"
+import image from "@/assets/images/fintechOut.jpg"
 
 export function FAQ() {
     return (
-        <div className={`${Styles.container} py-20 items-center `}>
-            
-            {/* Header */}
-            <div className="mb-10">
-                <h2 className="text-xl md:text-3xl font-bold text-gray-900 tracking-tight">
-                    Eng ko‘p beriladigan savollar
-                </h2>
-                <p className="text-gray-500 mt-2 text-sm md:text-base">
-                    Sizni qiziqtirgan savollarning javoblarini ushbu bo‘limdan topishingiz mumkin
-                </p>
+        <div className={`${Styles.container}  py-20 `}>
+            <div className="mb-5">
+                <h2 className="text-xl md:text-3xl font-bold">Eng ko`p beriladigan savollar</h2>
             </div>
-
-            <div className="flex flex-col lg:flex-row gap-16 items-start">
-
-                {/* Accordion */}
+            <div className={`flex gap-30 items-start`}>
                 <Accordion
                     type="single"
                     collapsible
@@ -57,17 +47,7 @@ export function FAQ() {
                     ))}
                 </Accordion>
 
-
-                <div className="w-full lg:w-auto lg:min-w-[380px]">
-                    <div className="">
-                        <Image
-                            src={image}
-                            alt="fintechhub.uz FAQ"
-                            className=" object-cover"
-                        />
-                    </div>
-                </div>
-
+                <Image src={image} alt="fintechhub.uz" />
             </div>
         </div>
     )

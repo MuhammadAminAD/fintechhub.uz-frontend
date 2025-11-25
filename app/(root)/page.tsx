@@ -10,6 +10,7 @@ import Images from './_components/images'
 import WhyUs from './_components/WhyUs'
 import { FAQ } from './_components/faq'
 import Paertners from './_components/partners'
+import BlogsCarousel from './_components/blogsCarousel'
 
 export default function page() {
     return (
@@ -21,9 +22,10 @@ export default function page() {
             <YoutubeVideo />
             <ContactForm />
             <Images />
-            <WhyUs/>
+            <WhyUs />
             <FAQ />
             <Paertners/>
+            <BlogsCarousel />
             <Freetrial />
         </div>
     )
