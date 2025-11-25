@@ -19,27 +19,27 @@ interface Description {
   des: string;
 }
 
-import image1 from "../../../assets/images/html.svg";
-import image2 from "../../../assets/images/css.svg";
-import image3 from "../../../assets/images/sass.png";
-import image4 from "../../../assets/images/figma.svg";
-import image5 from "../../../assets/images/bootstrap.svg";
-import image6 from "../../../assets/images/javascript.svg";
-import image7 from "../../../assets/images/jquery.png";
-import image8 from "../../../assets/images/gulp.svg";
-import image9 from "../../../assets/images/github.svg";
-import image10 from "../../../assets/images/api.png";
-import image11 from "../../../assets/images/react.png";
-import image12 from "../../../assets/images/redux.png";
-import image13 from "../../../assets/images/mui.svg";
-import image14 from "../../../assets/images/tailwindcss.svg";
-import image15 from "../../../assets/images/firbase.svg";
-import kub from "../../../assets/images/kub.png";
+import image1 from "../../../../assets/images/html.svg";
+import image2 from "../../../../assets/images/css.svg";
+import image3 from "../../../../assets/images/sass.png";
+import image4 from "../../../../assets/images/figma.svg";
+import image5 from "../../../../assets/images/bootstrap.svg";
+import image6 from "../../../../assets/images/javascript.svg";
+import image7 from "../../../../assets/images/jquery.png";
+import image8 from "../../../../assets/images/gulp.svg";
+import image9 from "../../../../assets/images/github.svg";
+import image10 from "../../../../assets/images/api.png";
+import image11 from "../../../../assets/images/react.png";
+import image12 from "../../../../assets/images/redux.png";
+import image13 from "../../../../assets/images/mui.svg";
+import image14 from "../../../../assets/images/tailwindcss.svg";
+import image15 from "../../../../assets/images/firbase.svg";
+import kub from "../../../../assets/images/kub.png";
 
-import devops1 from "../../../assets/images/devops-image.jpg";
-import devops2 from "../../../assets/images/docker.png";
-import devops3 from "../../../assets/images/linux-computer.png";
-import devops4 from "../../../assets/images/metrics.png";
+import devops1 from "../../../../assets/images/devops-image.jpg";
+import devops2 from "../../../../assets/images/docker.png";
+import devops3 from "../../../../assets/images/linux-computer.png";
+import devops4 from "../../../../assets/images/metrics.png";
 
 export const menuItems = [
   { name: "Bosh sahifa", path: "/" },
@@ -388,14 +388,6 @@ const CourseDetail: React.FC = () => {
 
   return (
     <div className="w-full">
-      {/* Page Header */}
-      <div className="w-full bg-linear-to-r from-blue-900 to-blue-700 py-16 px-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl text-white m-0 transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
-            {findedElement?.title}
-          </h1>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="flex justify-start w-full flex-col items-center">
@@ -455,14 +447,14 @@ const CourseDetail: React.FC = () => {
                   key={index}
                   className="transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 border-t-0 first:border-t rounded-none first:rounded-t-lg last:rounded-b-lg"
                 >
-                  <CardContent className="p-5 flex items-center gap-4">
+                  <CardContent className=" flex items-center gap-2">
                     <div
                       className="min-w-10 h-10 rounded-full text-xl flex items-center justify-center text-white transition-transform duration-300 hover:rotate-12 hover:scale-110"
                       style={{ backgroundColor: item?.color }}
                     >
                       {item.icon}
                     </div>
-                    <div className="flex gap-4 flex-wrap items-center">
+                    <div className="flex gap-1  flex-wrap items-center">
                       <p className="text-base text-muted-foreground m-0">
                         {item.title}:
                       </p>
