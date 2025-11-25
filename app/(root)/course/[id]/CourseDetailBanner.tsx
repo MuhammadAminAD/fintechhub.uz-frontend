@@ -52,7 +52,7 @@ const CourseDetailBanner: React.FC<CourseDetailBannerProps> = ({
       </div>
 
       {/* Содержимое вкладки */}
-      <Card className="rounded-none rounded-b-lg border-t-0">
+      <Card className="rounded-none rounded-b-lg border-t-0 mb-10">
         <CardContent className="p-8 min-h-[300px]">
           {detailDesc[activeTab] && (
             <div className="space-y-6">
