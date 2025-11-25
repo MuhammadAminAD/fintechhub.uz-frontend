@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import ContactModalContent from "@/components/ContactModalContent";
 
 interface DetailDesc {
   detail_title: string;
@@ -37,11 +38,10 @@ const CourseDetailBanner: React.FC<CourseDetailBannerProps> = ({
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`py-5 px-8 font-bold text-lg rounded-none transition-all duration-400 relative w-full sm:w-auto md:w-auto ${
-              activeTab === index
-                ? "bg-linear-to-br from-teal-600 via-teal-500 to-teal-600 text-white shadow-none -translate-y-0.5"
-                : "bg-gray-200/30 text-gray-800 hover:bg-gray-200/50"
-            } ${index === 2 ? "sm:flex sm:justify-center sm:w-full md:w-auto" : ""}`}
+            className={`py-5 px-8 font-bold text-lg rounded-none transition-all duration-400 relative w-full sm:w-auto md:w-auto ${activeTab === index
+              ? "bg-linear-to-br from-teal-600 via-teal-500 to-teal-600 text-white shadow-none -translate-y-0.5"
+              : "bg-gray-200/30 text-gray-800 hover:bg-gray-200/50"
+              } ${index === 2 ? "sm:flex sm:justify-center sm:w-full md:w-auto" : ""}`}
           >
             {item?.detail_title}
             {activeTab === index && (
@@ -75,12 +75,16 @@ const CourseDetailBanner: React.FC<CourseDetailBannerProps> = ({
                   </strong>
                   <span className="block">Telefon : +99871 203-88-00</span>
                 </p>
-                <Button
-                  size="lg"
-                  className="mt-6 bg-linear-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 transition-all duration-400 hover:-translate-y-0.5 hover:scale-105 active:translate-y-0 active:scale-[1.02] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-all before:duration-600 hover:before:left-full"
-                >
-                  Endi Frontend dasturchi bolaman
-                </Button>
+                <Dialog>
+
+                  <DialogTrigger className="py-2 px-6 rounded-lg text-white font-medium mt-6 bg-linear-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 transition-all duration-400 hover:-translate-y-0.5 hover:scale-105 active:translate-y-0 active:scale-[1.02] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-all before:duration-600 hover:before:left-full">
+                    Endi Frontend dasturchi bolaman
+                  </DialogTrigger>
+
+                  <DialogContent >
+                    <ContactModalContent />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           )}

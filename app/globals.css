@@ -140,6 +140,10 @@ body{
   overflow-x: hidden !important;
 }
 
+button{
+  cursor: pointer;
+}
+
 .header-background {
   background:
     url("../assets/images/HeaderBanner.jpg") center/cover no-repeat;
