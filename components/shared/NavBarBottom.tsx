@@ -28,9 +28,9 @@ export default function NavBarBottom() {
                         <Image src={Logo} alt="Fintechhub logo it academiya" width={150} />
                     </a>
                     <ul className="hidden sm:flex items-center gap-3 text-neutral-600">
-                        <li><Instagram size={20} /></li>
-                        <li><Youtube size={24} /></li>
-                        <li><FaTelegram size={20} /></li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><Instagram size={20} /></li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><Youtube size={24} /></li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><FaTelegram size={20} /></li>
                     </ul>
                 </div>
 

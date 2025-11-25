@@ -37,7 +37,7 @@ const WhyUs: React.FC = () => {
       <div className=" mx-auto  items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className="flex justify-center lg:justify-start">
+          <div data-aos="fade-right" className="flex justify-center lg:justify-start">
             <div className="relative overflow-hidden  shadow-2xl w-full h-[400px] md:h-[600px] hover:shadow-3xl transition-all duration-300">
               <Image
                 width={4000}
@@ -50,7 +50,7 @@ const WhyUs: React.FC = () => {
           </div>
 
           {/* Content Section */}
-          <div className="space-y-8 lg:pr-10 px-4">
+          <div data-aos="fade-left" className="space-y-8 lg:pr-10 px-4">
             <h2 className="text-xl md:text-3xl lg:text-5xl leading-snug font-bold text-[#012237]">
               Dasturlashni nega aynan FinTechHub`da o`rganish kerak?
             </h2>
