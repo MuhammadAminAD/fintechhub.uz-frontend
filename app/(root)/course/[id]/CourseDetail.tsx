@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { FaPlay, FaStar } from "react-icons/fa6";
 import { IoIosNotificationsOutline, IoIosTimer } from "react-icons/io";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -42,6 +42,7 @@ import devops1 from "../../../../assets/images/devops-image.jpg";
 import devops2 from "../../../../assets/images/docker.png";
 import devops3 from "../../../../assets/images/linux-computer.png";
 import devops4 from "../../../../assets/images/metrics.png";
+import Image from "next/image";
 
 export const menuItems = [
   { name: "Bosh sahifa", path: "/" },
@@ -377,6 +378,7 @@ const CourseDetail: React.FC = () => {
       behavior: "instant",
     });
   }, [id]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const findedElement = courses?.find((item) => item.id === Number(id));
 
@@ -387,8 +389,7 @@ const CourseDetail: React.FC = () => {
       </div>
     );
   }
-    
-  const [modalOpen, setModalOpen] = useState(false);
+
 
   return (
     <div className="w-full">
@@ -411,11 +412,13 @@ const CourseDetail: React.FC = () => {
                   />
                 ))}
                 <Badge variant="secondary" className="mx-5 text-sm">
-                  12 ta o'quvchi
+                  12 ta o`quvchi
                 </Badge>
               </div>
             </div>
-            <img
+            <Image
+              width={4000}
+              height={2000}
               src="https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg"
               alt="Frontend course"
               className="w-full rounded-lg shadow-md mt-6"
