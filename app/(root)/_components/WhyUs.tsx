@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import mainImg from '../../../assets/images/benifits.jpg'
 import icon1 from '../../../assets/images/finImage2.png'
 import icon2 from '../../../assets/images/finImage3.png'
 import icon3 from '../../../assets/images/finImage4.png'
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import ContactModalContent from "@/components/ContactModalContent";
+import Image from 'next/image';
 
 interface Feature {
   title: string;
@@ -34,11 +35,13 @@ const WhyUs: React.FC = () => {
   return (
     <div className="py-24   relative bg-white">
       <div className=" mx-auto  items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative overflow-hidden  shadow-2xl w-full h-[400px] md:h-[600px] hover:shadow-3xl transition-all duration-300">
-              <img
+              <Image
+                width={4000}
+                height={2000}
                 src={mainImg.src}
                 alt="FinTech Team"
                 className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-300"
@@ -48,7 +51,7 @@ const WhyUs: React.FC = () => {
 
           {/* Content Section */}
           <div className="space-y-8 lg:pr-10 px-4">
-            <h2 className="text-4xl  lg:text-5xl font-bold text-[#012237] leading-tight">
+            <h2 className="text-xl md:text-3xl lg:text-5xl leading-snug font-bold text-[#012237]">
               Dasturlashni nega aynan FinTechHub`da o`rganish kerak?
             </h2>
 
@@ -60,7 +63,7 @@ const WhyUs: React.FC = () => {
                   className="flex flex-col items-center gap-3 group cursor-pointer"
                 >
                   <div className="relative w-24 h-24 rounded-lg overflow-hidden transition-all duration-300 group-hover:scale-110">
-                    <img
+                    <Image
                       src={feature.img}
                       alt={feature.title}
                       className="w-full h-full object-cover"
