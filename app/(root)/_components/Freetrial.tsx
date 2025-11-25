@@ -1,5 +1,6 @@
+import ContactModalContent from "@/components/ContactModalContent";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MailOpen } from "lucide-react";
 
 export default function Freetrial() {
@@ -15,14 +16,19 @@ export default function Freetrial() {
                             Mutloqa bepul sinov <br /> darsiga yoziling!
                         </h1>
                         <p className="text-white/90 text-sm lg:text-base mt-2">
-                            Hoziroq ro'yxatdan o'ting
+                            Hoziroq ro`yxatdan o`ting
                         </p>
                     </div>
                 </div>
                 <div>
-                    <Button className="rounded-xl py-7 px-10 lg:py-9 lg:px-14 cursor-pointer bg-blue-950 hover:bg-blue-900 text-white font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full lg:w-auto">
-                        Shu yerga bosing
-                    </Button>
+                    <Dialog>
+                        <DialogTrigger className="rounded-xl py-7 px-10 lg:py-9 lg:px-14 cursor-pointer bg-blue-950 hover:bg-blue-900 text-white font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full lg:w-auto">
+                            Shu yerga bosing
+                        </DialogTrigger>
+                        <DialogContent>
+                            <ContactModalContent></ContactModalContent>
+                        </DialogContent>
+                    </Dialog>
                 </div>
             </div>
         </div>

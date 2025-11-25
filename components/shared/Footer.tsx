@@ -9,6 +9,8 @@ import { IoMdMail } from "react-icons/io";
 import nav_logo from "../../assets/images/logo-white.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
+import ContactModalContent from "../ContactModalContent";
 
 
 // interface FooterProps {}
@@ -43,28 +45,28 @@ const Footer: React.FC = () => {
   }
 
   const socialLinks: SocialLink[] = [
-    { 
-      icon: <IoLogoInstagram className="text-xl" />, 
+    {
+      icon: <IoLogoInstagram className="text-xl" />,
       url: "https://instagram.com/fintechhubuz?igshid=MzRlODBiNWFlZA==",
       label: "Instagram"
     },
-    { 
-      icon: <FaYoutube className="text-xl" />, 
+    {
+      icon: <FaYoutube className="text-xl" />,
       url: "https://www.youtube.com/@fintechhubuz",
       label: "YouTube"
     },
-    { 
-      icon: <SiTelegram className="text-xl" />, 
+    {
+      icon: <SiTelegram className="text-xl" />,
       url: "https://t.me/fintechhubuz",
       label: "Telegram"
     },
-    { 
-      icon: <FaFacebook className="text-xl" />, 
+    {
+      icon: <FaFacebook className="text-xl" />,
       url: "#",
       label: "Facebook"
     },
-    { 
-      icon: <FaLinkedin className="text-xl" />, 
+    {
+      icon: <FaLinkedin className="text-xl" />,
       url: "#",
       label: "LinkedIn"
     },
@@ -80,31 +82,31 @@ const Footer: React.FC = () => {
             {/* Logo and Contact Column */}
             <div className="flex flex-col gap-6 lg:min-w-[280px]">
               {/* Logo */}
-              <div 
-                onClick={() => handleNavigate("/")} 
+              <div
+                onClick={() => handleNavigate("/")}
                 className="cursor-pointer mb-2"
               >
-               <Image
-              src={nav_logo}
-              width={220}
-              height={60}
-              alt="FintechHub Logo"
-              className="cursor-pointer hover:opacity-90 transition"
-            />
-                
+                <Image
+                  src={nav_logo}
+                  width={220}
+                  height={60}
+                  alt="FintechHub Logo"
+                  className="cursor-pointer hover:opacity-90 transition"
+                />
+
               </div>
 
               {/* Contact Info */}
               <div className="flex flex-col gap-4">
-                <a 
-                  href="tel:+998712038800" 
+                <a
+                  href="tel:+998712038800"
                   className="flex items-center gap-3 text-white hover:text-gray-300 transition-colors"
                 >
                   <FaPhone className="text-base" />
                   <span className="text-base">71 203 88 00</span>
                 </a>
-                <a 
-                  href="mailto:info@fintechhub.uz" 
+                <a
+                  href="mailto:info@fintechhub.uz"
                   className="flex items-center gap-3 text-white hover:text-gray-300 transition-colors"
                 >
                   <IoMdMail className="text-lg" />
@@ -187,12 +189,14 @@ const Footer: React.FC = () => {
           >
             71 203 88 00
           </a>
-          <button
-            onClick={() => handleNavigate("/register")}
-            className="bg-transparent text-white text-center py-4 px-6 rounded font-semibold text-lg border-2 border-white/30 hover:border-white/50 transition-colors"
-          >
-            Ro`yhatdan o`tish
-          </button>
+          <Dialog>
+            <DialogTrigger className="bg-transparent text-white text-center py-4 px-6 rounded font-semibold text-lg border-2 border-white/30 hover:border-white/50 transition-colors">
+              Ro`yhatdan o`tish
+            </DialogTrigger>
+            <DialogContent>
+              <ContactModalContent></ContactModalContent>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
 
@@ -201,8 +205,8 @@ const Footer: React.FC = () => {
         <div className="w-full lg:w-[70%] bg-[#0d1f2d] px-6 md:px-10 lg:px-16 py-6">
           <span className="text-white/50 text-sm">
             © Copyright 2023 by{" "}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="font-bold text-white hover:text-gray-300 transition-colors"
             >
               fintechhub.uz

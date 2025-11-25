@@ -13,6 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import CourseDetailBanner from "./CourseDetailBanner";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import ContactModalContent from "@/components/ContactModalContent";
+import banner from "@/assets/images/detailbanner.jpg"
 
 interface Description {
   icon: React.ReactNode;
@@ -419,7 +420,7 @@ const CourseDetail: React.FC = () => {
             <Image
               width={4000}
               height={2000}
-              src="https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg"
+              src={banner}
               alt="Frontend course"
               className="w-full rounded-lg shadow-md mt-6"
             />
