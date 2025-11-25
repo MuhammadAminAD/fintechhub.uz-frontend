@@ -15,6 +15,7 @@ import { FAQ } from './_components/faq'
 import BlogsCarousel from './_components/blogsCarousel'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FixedBanner from '@/components/FixedBanner'
 
 export default function Home() {
     useEffect(() => {
