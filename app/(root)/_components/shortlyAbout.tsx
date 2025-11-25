@@ -1,8 +1,31 @@
+import { useCounter } from "@/app/hooks/useCounter";
 import main_image from "@/assets/images/shortly about.jpg"
 import { Styles } from "@/styles/styles"
 import Image from "next/image"
+import { useEffect, useRef, useState } from "react";
+
+
 
 export default function ShortlyAbout() {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (ref.current) observer.observe(ref.current);
+    }, []);
+
+    const count = useCounter(isVisible ? 700 : 0, 2000);
+
     return (
         <div className={`${Styles.container} py-20`}>
             <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 sm:gap-20 md:gap-30 items-center">
@@ -13,14 +36,14 @@ export default function ShortlyAbout() {
 
                     <div className={`absolute -right-1 -bottom-1 w-30 md:w-40 h-30 md:h-40 shadow bg-white p-10 ${Styles.flex_center} rounded-full`}>
                         <div className={`rounded-full border-dashed border border-black w-20 md:w-30 h-20 md:h-30 shrink-0 ${Styles.flex_center} flex-col`}>
-                            <div>
+                            <div ref={ref}>
                                 <h1 className="text-orange-500 text-center font-black">
-                                    700+
+                                    {count}+
                                 </h1>
                             </div>
 
                             <div>
-                                <p className="text-neutral-800 text-shadow-sm md:text-[10px] text-[8px]">bizga ishonganlar</p>
+                                <p className="text-neutral-800 text-shadow-sm md:text-[10px] ">bizga ishonganlar</p>
                             </div>
                         </div>
                     </div>

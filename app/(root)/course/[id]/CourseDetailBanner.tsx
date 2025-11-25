@@ -57,7 +57,7 @@ const CourseDetailBanner: React.FC<CourseDetailBannerProps> = ({
           {detailDesc[activeTab] && (
             <div className="space-y-6">
               <div>
-                <h1 className="text-[28px] text-gray-800 font-bold mb-5 relative transition-colors duration-300 hover:text-teal-600 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[60px] after:h-[3px] after:bg-gradient-to-r after:from-teal-600 after:to-teal-500 after:transition-all after:duration-400 hover:after:w-[120px]">
+                <h1 className="text-[28px] text-gray-800 font-bold mb-5 relative transition-colors duration-300 hover:text-teal-600 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[60px] after:h-[3px] after:bg-linear-to-r after:from-teal-600 after:to-teal-500 after:transition-all after:duration-400 hover:after:w-[120px]">
                   {detailDesc[activeTab]?.detail_title}
                 </h1>
                 <div
@@ -77,7 +77,7 @@ const CourseDetailBanner: React.FC<CourseDetailBannerProps> = ({
                 </p>
                 <Button
                   size="lg"
-                  className="mt-6 bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 transition-all duration-400 hover:-translate-y-0.5 hover:scale-105 active:translate-y-0 active:scale-[1.02] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-all before:duration-600 hover:before:left-full"
+                  className="mt-6 bg-linear-to-r from-teal-600 to-teal-500 hover:from-teal-700 hover:to-teal-600 transition-all duration-400 hover:-translate-y-0.5 hover:scale-105 active:translate-y-0 active:scale-[1.02] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-all before:duration-600 hover:before:left-full"
                 >
                   Endi Frontend dasturchi bolaman
                 </Button>
