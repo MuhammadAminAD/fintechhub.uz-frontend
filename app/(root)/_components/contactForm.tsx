@@ -18,7 +18,7 @@ export default function ContactForm() {
         <section className="py-20 relative">
             <div className={`${Styles.container} flex items-center justify-between flex-col lg:flex-row max-lg:gap-10`}>
                 <div  data-aos="fade-right" className="max-w-xl">
-                    <h2 className="text-xl md:text-3xl font-bold">Hoziroq ro‘yxatdan o`ting</h2>
+                    <h2 className="text-xl md:text-3xl lg:text-5xl leading-snug font-bold text-[#012237]">Hoziroq ro‘yxatdan o`ting</h2>
                     <h3 className="md:text-lg mt-1 md:mt-2 mb-2 md:mb-5 font-medium">va bepul darsga ega bo`ling!</h3>
                     <p className="text-neutral-700">Dasturlash bilimlarini onlayn yoki offlayn tarzda o‘rganishingiz mumkin.
                         Amaliyotni esa, real ishlab turgan loyihalarimizga qo‘shilgan holda o‘taysiz.

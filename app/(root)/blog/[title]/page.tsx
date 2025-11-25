@@ -4,7 +4,7 @@ import { Styles } from "@/styles/styles";
 export default function page() {
     return (
         <div className={Styles.container}>
-            <div>
+            <div className="py-5">
                 <Image src={img} alt="" className="w-full max-h-[60vh] object-cover" />
                 <h1 className="text-4xl my-2 ml-1 font-semibold">
                     Lorem ipsum dolor sit amet.

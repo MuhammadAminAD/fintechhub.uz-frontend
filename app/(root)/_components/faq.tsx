@@ -12,7 +12,7 @@ export function FAQ() {
     return (
         <div className={`${Styles.container} py-20 `}>
             <div className="mb-5">
-                <h2 className="text-xl md:text-3xl font-bold">Eng ko`p beriladigan savollar</h2>
+                <h2 className="text-xl md:text-3xl lg:text-5xl leading-snug font-bold text-[#012237]">Eng ko`p beriladigan savollar</h2>
             </div>
             <div className={`gap-30 items-start grid grid-cols-1 lg:grid-cols-2 `}>
                 <Accordion
