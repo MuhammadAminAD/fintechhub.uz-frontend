@@ -340,7 +340,7 @@ const CourseDetail: React.FC = () => {
       icon: <FaRegFileAlt />,
       color: "#7c4bc0",
       title: "Dars davomiyligi",
-      des: id == "4" ? "8 oy" : "10 oy",
+      des: Number(id) === 4 ? "8 oy" : "10 oy",
     },
     {
       icon: <RxAvatar />,
@@ -376,7 +376,7 @@ const CourseDetail: React.FC = () => {
     });
   }, [id]);
 
-  const findedElement = courses?.find((item) => item.id == id);
+  const findedElement = courses?.find((item) => item.id === Number(id));
 
   if (!findedElement) {
     return (
