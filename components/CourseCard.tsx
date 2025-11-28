@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image";
-import ReactIocn from "@/assets/icons/react.svg"
 import Link from "next/link";
 import { ICourse } from "@/types/types";
+// import { useEffect } from "react";
 export default function CourseCard({ data }: { data: ICourse }) {
+    // useEffect(() => { console.log(data) }, [])
     return (
         <Link href={"/course/1"}>
             <div className="shadow-md p-2 lg:p-4 rounded-lg lg:hover:-translate-y-2 duration-300 lg:hover:opacity-50 lg:hover:scale-105">
@@ -17,12 +20,15 @@ export default function CourseCard({ data }: { data: ICourse }) {
                             <li>Davomiyligi {data.lesson_duration}oy</li>
                             <li>Guruhda {data.number_of_students} ta talaba</li>
                         </ul>
-                        <Image src={data.logo} alt={data.title} width={60} />
+                        <Image src={data.logo} alt={data.title} width={60} height={60} />
                     </div>
                     <div className="flex items-center gap-2">
-                        {data.icons.map((icon, index) =>
-                            <Image src={icon} alt={data.title} key={index} width={20} className="shrink-0" />
-                        )}
+                        {data.icons.map((icon, index) => {
+                            console.log(icon.icon)
+                            return (
+                                <Image src={icon.icon} alt={data.title} key={index} width={20} height={60} className="shrink-0" />
+                            )
+                        })}
                     </div>
                 </div>
             </div>

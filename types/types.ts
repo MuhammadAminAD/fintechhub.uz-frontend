@@ -1,7 +1,7 @@
 export interface ICourse {
     id: number;
     title: string;
-    icons: string[];
+    icons: { id: string, icon: string }[];
     lesson_time: string;
     lesson_duration: number;
     number_of_students: number;
