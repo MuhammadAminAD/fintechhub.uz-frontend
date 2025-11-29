@@ -17,11 +17,11 @@ export default function CourseCard({ data }: { data: ICourse }) {
                             <li>Davomiyligi {data.lesson_duration}oy</li>
                             <li>Guruhda {data.number_of_students} ta talaba</li>
                         </ul>
-                        <Image src={data.logo} alt={data.title} width={60} />
+                        <Image src={data.logo} alt={data.title} height={60} width={60} />
                     </div>
                     <div className="flex items-center gap-2">
                         {data.icons.map((icon, index) =>
-                            <Image src={icon} alt={data.title} key={index} width={20} className="shrink-0" />
+                            <Image src={icon} alt={data.title} key={index} height={20} width={20} className="shrink-0" />
                         )}
                     </div>
                 </div>

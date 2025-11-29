@@ -2,7 +2,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 // Baza (asosiy) URL'ni belgilaymiz
-const BASE_URL = 'http://project-main.fintechhub.uz';
+const BASE_URL = 'http://192.168.1.52:8000';
 
 export const ReduxApi = createApi({
     reducerPath: 'api',
@@ -27,6 +27,16 @@ export const ReduxApi = createApi({
         }),
         getCourseById: builder.query<any[], void>({
             query: (id) => `courses/${id}`,
+        }),
+        getTeachers: builder.query<any[], void>({
+            query: () => '/teachers/',
+        }),
+    
+        getPartners: builder.query<any[], void>({
+            query: () => '/partners/',
+        }),
+        getFAQ: builder.query<any[], void>({
+            query: () => '/faqs/',
         }),
     }),
 });

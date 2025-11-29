@@ -1,3 +1,5 @@
+'use client'
+
 import CourseCard from './CourseCard'
 import { Styles } from '@/styles/styles'
 import { useGetCoursesQuery } from '@/lib/services/api'
