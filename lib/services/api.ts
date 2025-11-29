@@ -8,25 +8,12 @@ export const ReduxApi = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
     endpoints: (builder) => ({
-        // getPosts: builder.query<any[], void>({
-        //   query: () => 'posts', 
-        // }),
-        // getPostById: builder.query<any, number>({
-        //   query: (id) => `posts/${id}`, 
-        // }),
-        // createPost: builder.mutation<any, { title: string, body: string, userId: number }>({
-        //   query: (newPost) => ({
-        //     url: 'posts',
-        //     method: 'POST',
-        //     body: newPost,
-        //   }),
-        // }),
 
         getCourses: builder.query({
             query: () => '/courses/',
         }),
         getCourseById: builder.query({
-            query: (id) => `courses/${id}`,
+            query: (id) => `courses/${id}/`,
         }),
         getTeachers: builder.query({
             query: () => '/teachers/',
@@ -38,7 +25,12 @@ export const ReduxApi = createApi({
         getFAQ: builder.query({
             query: () => '/faqs/',
         }),
+        getBlogs: builder.query({
+            query: () => '/blogs/',
+        }),
     }),
 });
 
-export const { useGetCoursesQuery } = ReduxApi;
+export const { useGetCoursesQuery, useGetCourseByIdQuery, useGetTeachersQuery,
+    useGetPartnersQuery, useGetFAQQuery, useGetBlogsQuery
+ } = ReduxApi;
