@@ -19,3 +19,13 @@ export interface ITeacher {
     specialty: string;
     photo: string;
 }
+
+export interface IBlogs {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    created_at: string;
+    vedio: string | null;
+    vedio_url: string | null;
+}

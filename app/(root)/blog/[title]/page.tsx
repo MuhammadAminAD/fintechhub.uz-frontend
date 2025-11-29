@@ -1,15 +1,30 @@
+"use client"
+
 import Image from "next/image";
 import img from "@/assets/images/benifits.jpg"
 import { Styles } from "@/styles/styles";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useGetBlogsByIdQuery } from "@/lib/services/api";
 export default function page() {
+    const { title }: { title: string } = useParams()
+    const [activeId, setActiveId] = useState<string | null>(null);
+    useEffect(() => {
+        setActiveId(title?.split("-").at(-1) ?? null);
+    }, [title])
+
+    const { data } = useGetBlogsByIdQuery(activeId)
     return (
         <div className={Styles.container}>
             <div className="py-5">
-                <Image src={img} alt="" className="w-full max-h-[60vh] object-cover" />
+                {data?.vedio_url ? (
+                    <iframe src={data?.video_url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="w-full max-h-[60vh] object-cover"></iframe>)
+                    :
+                    <Image src={data?.image || img} alt="blog image" width={800} height={400} className="w-full max-h-[60vh] object-cover" />}
                 <h1 className="text-4xl my-2 ml-1 font-semibold">
-                    Lorem ipsum dolor sit amet.
+                    {data?.title}
                 </h1>
-                <p className="text-neutral-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, esse et dolores, aspernatur placeat perspiciatis quo magni officia assumenda ea reprehenderit? In alias quibusdam debitis quasi, cum esse mollitia. Error amet earum iusto nulla neque mollitia nesciunt libero possimus rem iores, quasi doloremque sunt praesentium ab? Voluptatem omnis perferendis voluptate dicta temporibus iure dolores. Sapiente enim expedita reiciendis natus, excepturi laboriosam culpa! Aliquid iure, laboriosam veniam ipsum, totam molestiae ex eligendi dolore quaerat reprehenderit commodi itaque nemo ab rerum asperiores fugit quod nobis. Unde officiis voluptatibus magni enim numquam ab autem voluptatum aliquam fugiat tempore. Nihil atque perferendis quidem maxime voluptatem unde repudiandae veniam at minus tenetur, voluptate repellendus nemo totam, recusandae expedita modi omnis eligendi? Consequuntur perspiciatis voluptates architecto. Quibusdam, temporibus laudantium? Nostrum assumenda dolores molestias maiores corrupti esse, magni eveniet aut culpa possimus earum sapiente obcaecati, quia alias laudantium labore. Eos, nihil nostrum. Expedita cumque iusto voluptate doloremque ea. Dolores alias veritatis, assumenda eligendi tempora fuga asperiores distinctio! Culpa at suscipit ullam ipsa animi praesentium nemo, rerum voluptatibus quisquam sit vel placeat voluptate ratione totam, magnam consequatur similique! Laudantium labore autem corrupti dolore. Tempora ipsa cumque dolores voluptatem autem quam! Distinctio obcaecati pariatur voluptates! Esse corporis sapiente dolorum veniam totam aliquid enim nulla, quisquam, vel, iste sunt qui quos praesentium dolor ullam. Accusantium, reprehenderit. Sequi ex id labore eum minus aliquam rem sapiente corrupti mollitia explicabo fugiat, quidem accusantium iusto beatae hic odio quae non omnis. Velit illum distinctio ut aliquam, ducimus ullam beatae itaque. Modi nisi libero, eum vel quam repellat quibusdam minima. Vitae officiis, veritatis doloremque magni alias nisi nam, amet architecto iusto assumenda quaerat autem! Facere excepturi quod ex iure qui fugiat id et blanditiis debitis autem eaque corrupti maxime molestias ipsam placeat sint, sunt sit voluptatibus inventore a temporibus deleniti quis obcaecati. In, repellat beatae? Ullam, nulla quas modi maiores in quos consequuntur voluptatum velit veniam doloribus earum minus tenetur dolores. Sapiente maiores perferendis non quae, cumque quisquam reiciendis consectetur dolorem delectus est necessitatibus ea, nemo, magnam ad voluptatem voluptatibus quod architecto impedit nihil doloremque ullam repellendus repellat amet. Exercitationem, veniam adipisci soluta praesentium quos repudiandae vitae repellat labore cupiditate unde?</p>
+                <p className="text-neutral-800">{data?.description}</p>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ export const ReduxApi = createApi({
         getTeachers: builder.query({
             query: () => '/teachers/',
         }),
-    
+
         getPartners: builder.query({
             query: () => '/partners/',
         }),
@@ -28,9 +28,12 @@ export const ReduxApi = createApi({
         getBlogs: builder.query({
             query: () => '/blogs/',
         }),
+        getBlogsById: builder.query({
+            query: (id) => `/blogs/${id}/`,
+        }),
     }),
 });
 
 export const { useGetCoursesQuery, useGetCourseByIdQuery, useGetTeachersQuery,
-    useGetPartnersQuery, useGetFAQQuery, useGetBlogsQuery
- } = ReduxApi;
+    useGetPartnersQuery, useGetFAQQuery, useGetBlogsQuery , useGetBlogsByIdQuery
+} = ReduxApi;
