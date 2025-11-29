@@ -28,6 +28,16 @@ export const ReduxApi = createApi({
         getCourseById: builder.query({
             query: (id) => `courses/${id}`,
         }),
+        getTeachers: builder.query<any[], void>({
+            query: () => '/teachers/',
+        }),
+    
+        getPartners: builder.query<any[], void>({
+            query: () => '/partners/',
+        }),
+        getFAQ: builder.query<any[], void>({
+            query: () => '/faqs/',
+        }),
     }),
 });
 
