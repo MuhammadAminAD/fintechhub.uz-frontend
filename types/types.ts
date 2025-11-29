@@ -12,3 +12,10 @@ export interface ICourse {
     price: number;
     logo: string;
 }
+
+export interface ITeacher {
+    id: string;
+    full_name: string;
+    specialty: string;
+    photo: string;
+}

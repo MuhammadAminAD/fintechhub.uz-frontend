@@ -1,11 +1,11 @@
 "use client"
 
 import Image from "next/image";
-import teacher from "@/assets/images/Alisher-BIYkM_QF.png"
 import { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
+import { ITeacher } from "@/types/types";
 
-export default function TeacherCard() {
+export default function TeacherCard({ data }: { data: ITeacher }) {
     const tiltRef = useRef(null);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export default function TeacherCard() {
         >
             <div>
                 <Image
-                    src={teacher}
+                    src={data.photo}
                     alt="fintechub mentors"
                     className="h-80 w-full object-cover"
                     width={4000}
@@ -35,8 +35,8 @@ export default function TeacherCard() {
             </div>
 
             <div className="w-full py-2 bg-white">
-                <h3 className="font-semibold text-center text-lg">Alisher Ashrapov</h3>
-                <p className="text-center">Frontend | React JS dasturchi</p>
+                <h3 className="font-semibold text-center text-lg">{data.full_name}</h3>
+                <p className="text-center">{data.specialty}</p>
             </div>
         </div>
     );
