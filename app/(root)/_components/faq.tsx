@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Accordion,
     AccordionContent,
@@ -7,8 +9,11 @@ import {
 import { Styles } from "@/styles/styles"
 import Image from "next/image"
 import image from "@/assets/images/fintechOut.jpg"
+import { useGetFAQQuery } from "@/lib/services/api"
+import { IFaqs } from "@/types/types"
 
 export function FAQ() {
+    const { data } = useGetFAQQuery(" ")
     return (
         <div className={`${Styles.container} py-20 `}>
             <div className="mb-5">
@@ -21,19 +26,12 @@ export function FAQ() {
                     className="w-full"
                     defaultValue="item-0"
                 >
-                    {Array(6).fill(null).map((_, index) =>
+                    {data?.map((data: IFaqs, index: number) =>
                         <AccordionItem value={`item-${index}`} key={index} data-aos="fade-right">
-                            <AccordionTrigger className="md:text-lg font-medium">Product Information</AccordionTrigger>
+                            <AccordionTrigger className="md:text-lg font-medium">{data.question}</AccordionTrigger>
                             <AccordionContent className="flex flex-col gap-4 text-balance">
                                 <p>
-                                    Our flagship product combines cutting-edge technology with sleek design.
-                                    Built with premium materials, it offers unparalleled performance and
-                                    reliability.
-                                </p>
-
-                                <p>
-                                    Key features include advanced processing capabilities and an intuitive
-                                    user interface designed for both beginners and experts.
+                                    {data.answer}
                                 </p>
                             </AccordionContent>
                         </AccordionItem>

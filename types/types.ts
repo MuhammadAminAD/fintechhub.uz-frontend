@@ -19,3 +19,9 @@ export interface ITeacher {
     specialty: string;
     photo: string;
 }
+
+export interface IFaqs {
+    question: string;
+    answer: string;
+    id: string;
+}
