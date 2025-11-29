@@ -4,14 +4,11 @@ import Image from "next/image";
 import img from "@/assets/images/benifits.jpg"
 import { Styles } from "@/styles/styles";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { useGetBlogsByIdQuery } from "@/lib/services/api";
-export default function page() {
+export default function Blogs() {
     const { title }: { title: string } = useParams()
-    const [activeId, setActiveId] = useState<string | null>(null);
-    useEffect(() => {
-        setActiveId(title?.split("-").at(-1) ?? null);
-    }, [title])
+    const activeId = useMemo(() => title?.split("-").at(-1) ?? null, [title])
 
     const { data } = useGetBlogsByIdQuery(activeId)
     return (
