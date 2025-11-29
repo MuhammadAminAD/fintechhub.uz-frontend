@@ -29,3 +29,8 @@ export interface IBlogs {
     vedio: string | null;
     vedio_url: string | null;
 }
+export interface IFaqs {
+    question: string;
+    answer: string;
+    id: string;
+}
