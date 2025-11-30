@@ -30,27 +30,38 @@ export default function NavBarBottom() {
                         <Image src={Logo} alt="Fintechhub logo it academiya" width={150} />
                     </a>
                     <ul className="hidden sm:flex items-center gap-3 text-neutral-600">
-                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><Instagram size={20} /></li>
-                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><Youtube size={24} /></li>
-                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300"><FaTelegram size={20} /></li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300">
+                            <Link href={'https://instagram.com/fintechhubuz?igshid=MzRlODBiNWFlZA=='}>
+                                <Instagram size={20} />
+                            </Link>
+                        </li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300">
+                            <Link href={'https://www.youtube.com/@fintechhubuz'}>
+                                <Youtube size={24} />
+                            </Link>
+                        </li>
+                        <li className="lg:hover:text-[#012237] cursor-pointer text-neutral-300">
+                            <Link href={'https://t.me/fintechhubuz'}>
+                                <FaTelegram size={20} />
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 
                 {/* Desktop menu */}
                 <ul className="hidden lg:flex items-center gap-5 font-medium text-neutral-600">
-                {links.map((link) => (
-                    <li
-                        key={link.name}
-                        className={`lg:hover:underline hover:text-[#012237] transition ${
-                            pathname === link.href
+                    {links.map((link) => (
+                        <li
+                            key={link.name}
+                            className={`lg:hover:underline hover:text-[#012237] transition ${pathname === link.href
                                 ? "text-[#012237] font-semibold"
                                 : "text-neutral-300"
-                        }`}
-                    >
-                        <Link href={link.href}>{link.name}</Link>
-                    </li>
-                ))}
-            </ul>
+                                }`}
+                        >
+                            <Link href={link.href}>{link.name}</Link>
+                        </li>
+                    ))}
+                </ul>
 
 
                 {/* Mobile menu button */}

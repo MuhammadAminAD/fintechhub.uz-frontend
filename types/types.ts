@@ -34,3 +34,5 @@ export interface IFaqs {
     answer: string;
     id: string;
 }
+
+export interface IForm { familiya: string, ism: string, kurs: string, phone: string, target: string, desc: string }
