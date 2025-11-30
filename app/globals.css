@@ -131,15 +131,17 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0;
 }
 
-body{
+html,
+body {
   overflow-x: hidden !important;
+  width: 100%;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
