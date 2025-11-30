@@ -16,6 +16,7 @@ import BlogsCarousel from './_components/blogsCarousel'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FixedBanner from '@/components/FixedBanner'
+import Partners from './_components/partners'
 
 export default function Home() {
     useEffect(() => {
@@ -36,6 +37,7 @@ export default function Home() {
             <WhyUs />
             <FAQ />
             <BlogsCarousel />
+            <Partners/>
             <Freetrial />
         </div>
     )
